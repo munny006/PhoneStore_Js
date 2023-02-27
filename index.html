@@ -9,26 +9,32 @@
 </head>
 <body>
    <header class="py-4 mb-5" style="background-color: skyblue;">
-    <h1 class="text-center mb-2">Welcome To Phone Hunter !!</h1>
+    <h1 class="text-center mb-2">Welcome To Phone Store !!</h1>
    </header>
   <main class="container">
     <section>
       <div class="mb-3 w-50">
         
         <input id="search-field" type="email" class="form-control" id="exampleFormControlInput1" placeholder="search your phone">
-       
+        <div class="btn btn-danger" id="btn-search" style="margin-left: 574px;
+        margin-top: -69px;">Search</div>
       </div>
-      <div class="mt-4 d-none" id="no-found-message">
-        <h3 class="text-warning">No Phone Found . please Try a new Search</h3>
-      </div>
-     
+    
+      
+   
     </section>
-    <div class="btn btn-danger" id="btn-search" style="margin-left: 574px;
-    margin-top:-98px;">Search</div>
+    
+    
     <section>
      
             <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
              
+        </div>
+        <div class="mt-4 d-none" id="no-found-message">
+          <h3 class="text-warning">No Phone Found . please Try a new Search</h3>
+        </div>
+        <div class="text-center d-none py-4" id="show-all">
+          <div class="btn btn-primary" id="btn-showAll">Show All</div>
         </div>
     </section>
     <section class="d-none" id="loader">
