@@ -4,7 +4,7 @@ const loadPhones = async(searchText,dataLimit) =>{
     const data = await res.json();
     displayPhones(data.data,dataLimit);
 }
-const displayPhones = phones =>{
+const displayPhones = (phones,dataLimit) => {
    const phonesContainer = document.getElementById('phones-container');
    phonesContainer.textContent = '';
    //display 10 phones only
@@ -35,6 +35,7 @@ const displayPhones = phones =>{
                     <div class="card-body">
                       <h5 class="card-title">${phone.phone_name}</h5>
                       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <button onclick="loadPhoneDetails('${phone.slug}')" class="btn btn-primary">Show Details</button>
                     </div>
                   </div>
     `;
@@ -52,9 +53,16 @@ const processSearch = (dataLimit) =>{
 }
 document.getElementById('btn-search').addEventListener('click',function(){
   //start loader
-  processSearch(10)
+  processSearch(10);
 
 });
+//input search enter key handler
+document.getElementById('search-field').addEventListener('keypress',function(e){
+  
+  if(e.key === 'Enter'){
+    processSearch(10);
+  }
+}); 
 const toggleSpinner = isLoading =>{
   const loaderSection = document.getElementById('loader');
   if(isLoading){
@@ -68,5 +76,12 @@ const toggleSpinner = isLoading =>{
 document.getElementById('btn-showAll').addEventListener('click',function(){
   processSearch();
 });
+
+const loadPhoneDetails = async id =>{
+  const url = `http://openapi.programming-hero.com/api/phone/${id}`;
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data.data);
+}
 
 // loadPhones();
