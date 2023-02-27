@@ -18,15 +18,25 @@
         <input id="search-field" type="email" class="form-control" id="exampleFormControlInput1" placeholder="search your phone">
        
       </div>
+      <div class="mt-4 d-none" id="no-found-message">
+        <h3 class="text-warning">No Phone Found . please Try a new Search</h3>
+      </div>
      
     </section>
     <div class="btn btn-danger" id="btn-search" style="margin-left: 574px;
-    margin-top: -101px;">Search</div>
+    margin-top:-98px;">Search</div>
     <section>
      
             <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
              
         </div>
+    </section>
+    <section class="d-none" id="loader">
+      <div class="d-flex justify-content-center align-items-center border" style="height:400px;">
+        <div class="spinner-border text-success" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
     </section>
   </main>
     
