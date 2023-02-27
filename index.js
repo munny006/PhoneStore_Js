@@ -30,7 +30,7 @@ const displayPhones = (phones,dataLimit) => {
     const phoneDiv = document.createElement('div');
     phoneDiv.classList.add('col');
     phoneDiv.innerHTML= `
-     <div class="card p-4">
+     <div class="card p-4" >
                     <img src="${phone.image}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">${phone.phone_name}</h5>
