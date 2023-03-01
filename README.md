@@ -1,2 +1,2 @@
 # PhoneStore_Js
-Live Link : https://glittering-banoffee-a54878.netlify.app
+Live Link :https://comforting-puffpuff-132773.netlify.app/
