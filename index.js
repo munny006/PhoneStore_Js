@@ -35,7 +35,7 @@ const displayPhones = (phones,dataLimit) => {
                     <div class="card-body">
                       <h5 class="card-title">${phone.phone_name}</h5>
                       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <button onclick="loadPhoneDetails('${phone.slug}')" class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#phoneDetailModal">Show Details</button>
+                      <button onclick="loadPhoneDetails('${phone.slug}')" class="btn btn-outline-info"data-bs-toggle="modal" data-bs-target="#phoneDetailModal"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                      
                     </div>
                   </div>
