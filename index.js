@@ -91,7 +91,9 @@ const displayPhoneDetails = phone =>{
   modalTitle.innerText = phone.name;
   const phoneDetails = document.getElementById('phoneDetails');
   phoneDetails.innerHTML = `
-  <p>Release Date : ${phone.releaseDate ? phone.releaseDate : 'NO release date Found'}</p>
+  <img src="${phone.image}" style="float: left;margin-left: 139px;">
+  <p style="margin-top: 245px;">Release Date : ${phone.releaseDate ? phone.releaseDate : 'NO release date Found'}</p>
+  <p>Storage:${phone.mainFeatures.storage}</p>
   <p> Others : ${phone.others ? phone.others.Bluetooth : 'NO Bluetooth Information'}</p>
   
   `
